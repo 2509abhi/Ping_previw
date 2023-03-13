@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/16fa3b7be5.js" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | Ping coming soon page</title>
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      text-align: center;
+      color: grey;
+      font-family: sans-serif;
+    }
+    
+    a{
+      text-decoration-line: none;
+    }
+    input{
+      border: #000 .5px solid;
+      border-radius: 30px;
+      display: inline-block;
+      padding: 1rem;
+      width: 20rem;
+      
+    }
+    .lo{
+      color: #fff;
+      background-color: rgb(66, 66, 233);
+      margin: .2rem;
+    }
+    .lo:hover{
+      color: rgb(66, 66, 233);
+      background-color: #fff;
+    }
+    .email{
+      margin: 2rem;
+    }
+    .hidden{
+      color: red;
+      display: none;
+      position: relative;
+      right: 7.5rem;
+    }
+    .btn{
+      background-color: rgb(66, 66, 233);
+      border-radius: 30px;
+      color: #fff;
+      display: inline-block;
+      padding: 1rem;
+      width: 6rem;
+    }
+    .btn:hover{
+      background-color: rgb(89, 89, 252);
+    }
+    .st1{
+      color: #000;
+    }
+    .dash{
+      width: 39%;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<main id=""body>
+  <img src="images/logo.svg" alt="logo">
+  <h1>We are launching <strong class="st1">soon!</strong></h1>
+
+  <p><strong class="st1">Subscribe and get notified</strong></p>
+  <div class="email">
+    <input type="email" placeholder="Your Email address....">
+    <a class="btn" href="#">Notify Me</a>
+    <p class="hidden">Please provide a valid email address</p>
+  </div>
+  
+  <img class="dash" src="images/illustration-dashboard.png" alt="dashboard">
+  <div class="ele">
+    <a href="#" class="lo fa-brands fa-facebook"></a>
+    <a href="#" class="lo fa-brands fa-twitter"></a>
+    <a href="#" class="lo fa-brands fa-instagram"></a>
+  </div>
+  <p>&copy; Copyright Ping. All rights reserved.</p>
+</main>
+<footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" >Frontend Mentor</a>. 
+      Coded by <a href="#">Abhishek Bansal</a>.
+    </p>
+  </footer>
+  <script> 
+    document.querySelector(".btn").addEventListener("click", function(){
+      if(document.querySelector("input").value.length == 0 || (document.querySelector("input").value.includes("@"))){
+        document.querySelector(".hidden").style.display = "block";
+        document.querySelector("input").placeholder = "example@gmail/com";
+        document.querySelector("input").style.borderColor  = "red";
+      }
+    });
+  </script>
+</body>
+</html>
